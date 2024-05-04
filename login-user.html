@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Lean Space's</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-header">
+                Login
+            </div>
+            <div class="login-body">
+                <div id="customer-form" class="active-customer">
+                    <h2>Customer Login</h2>
+                    <form id="customer-login-form">
+                        <input type="email" id="customer-email" name="customer-email" placeholder="Email" required>
+                        <br>
+                        <input type="password" id="customer-password" name="customer-password" placeholder="Password"
+                            required>
+                        <br>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+
+                    <a href="register-user.html" class="login-option">Don't Have an Account?</a>
+                    <span class="login-option" onclick="toggleLogin('staff')">Login as Staff</span>
+                    <a href="index.html" class="login-option">Go to Home</a>
+                    <p class="error-message" id="customer-error-message"></p>
+                </div>
+
+                <div id="staff-form">
+                    <h2>Staff Login</h2>
+                    <form id="staff-login-form">
+                        <input type="email" id="staff-email" name="staff-email" placeholder="Email" required>
+                        <br>
+                        <input type="password" id="staff-password" name="staff-password" placeholder="Password"
+                            required>
+                        <br>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+                    <span class="login-option" onclick="toggleLogin('customer')">Login as Customer</span>
+                    <a href="index.html" class="login-option">Go to Home</a>
+                    <p class="error-message" id="staff-error-message"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+
+        document.getElementById('customer-login-form').addEventListener('submit', function (event) {
+            loginUser('customer', event);
+        });
+
+        document.getElementById('staff-login-form').addEventListener('submit', function (event) {
+            loginUser('staff', event);
+        });
+
+        function toggleLogin(userType) {
+            if (userType === 'customer') {
+                document.getElementById('customer-form').classList.add('active-customer');
+                document.getElementById('staff-form').classList.remove('active-staff');
+            } else if (userType === 'staff') {
+                document.getElementById('customer-form').classList.remove('active-customer');
+                document.getElementById('staff-form').classList.add('active-staff');
+            }
+
+            document.getElementById('customer-error-message').innerText = '';
+            document.getElementById('staff-error-message').innerText = '';
+        }
+
+        function loginUser(userType, event) {
+            event.preventDefault();
+
+            var email, password, errorMessageId;
+
+            if (userType === 'customer') {
+                email = document.getElementById('customer-email').value;
+                password = document.getElementById('customer-password').value;
+                errorMessageId = 'customer-error-message';
+            } else if (userType === 'staff') {
+                email = document.getElementById('staff-email').value;
+                password = document.getElementById('staff-password').value;
+                errorMessageId = 'staff-error-message';
+            }
+
+            if (email === 'customer@email.com' && password === 'customer12345' && userType === 'customer') {
+                window.location.href = 'customer/customer-dashboard.html';
+            } else if (email === 'staff@email.com' && password === 'staff12345' && userType === 'staff') {
+                window.location.href = 'staff/staff-dashboard.html';
+            } else {
+                document.getElementById(errorMessageId).innerText = 'Invalid email or password. Please try again.';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

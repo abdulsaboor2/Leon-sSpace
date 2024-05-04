@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Lean's Space</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="js/script.js"></script>
+
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/6bbeae992c.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-header">
+            <p><i class="fas fa-map"></i> Somewhere in the World, Hong Kong</p>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="header-container">
+            <form class="search-form">
+                <input type="text" name="search" placeholder="Search Here" required />
+                <button class="btn btn-extra" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+            <a href="../index.html">
+                <img src="../images/lean's-space-logo.png" alt="Lean's Space" title="Lean's Space" />
+            </a>
+            <div class="contact-info">
+                <h2>Call US Now!</h2>
+                <a href="tel:8523021234567"><i class="fas fa-mobile-alt"></i> +852-3021234567</a>
+            </div>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Category
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../products.html">Stitched</a>
+                    <a href="../products.html">Unstitched</a>
+                    <a href="../products.html">Printed Suit</a>
+                    <a href="../products.html">New Arrivvals</a>
+                </div>
+            </div>
+            <a href="../about-us.html">About</a>
+            <a href="../contact-us.html">Contact</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../faq.html">FAQ</a>
+            <div class="login-logout">
+                <a href="checkout.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="../index-user.html" class="active">Logout</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </header>
+
+    <div class="commonTitle">
+        <h1>Customer Dashboard</h1>
+    </div>
+
+    <section class="customer-section">
+        <div class="customer-container">
+            <div class="customer-dashboard-header">
+                <div class="profile-info">
+                    <img src="../images/lean's-space-logo.png" alt="Profile Image" class="profile-image">
+                    <div class="user-info">
+                        <h2>John Doe</h2>
+                        <p>Email: john.doe@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customer-content-container">
+                <div class="sidebar">
+                    <h2 id="orderHistoryTab" onclick="showTab('order-history')">Order History
+                    </h2>
+                    <h2 id="savedItemsTab" onclick="showTab('saved-items')">Saved Items</h2>
+                    <h2 id="accountInfoTab" onclick="showTab('account-info')">Account Information</h2>
+                    <h2 id="notificationsTab" onclick="showTab('notifications')">Notifications</h2>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="section order-history" id="section-order-history">
+                        <div class="card">
+                            <h3>Order History</h3>
+                            <div class="order-item">
+                                <img src="../images/products/product13.png" alt="Product Image">
+                                <p>Product Name</p>
+                                <p>Order Date: 2023-01-01</p>
+                                <a href="#" onclick="alert('Feedback Page')" class="btn">Feedback</a>
+                            </div>
+                            <div class="order-item">
+                                <img src="../images/products/product3.png" alt="Product Image">
+                                <p>Another Product</p>
+                                <p>Order Date: 2023-02-01</p>
+                                <a href="#" onclick="alert('Feedback Page')" class="btn">Feedback</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section saved-items" id="section-saved-items">
+                        <div class="card">
+                            <h3>Saved Items</h3>
+                            <div class="saved-item">
+                                <img src="../images/products/product12.png" alt="Product Image">
+                                <p>Product Name</p>
+                            </div>
+                            <div class="saved-item">
+                                <img src="../images/products/product1.png" alt="Product Image">
+                                <p>Another Product</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section account-info" id="section-account-info">
+                        <div class="card">
+                            <h3>Account Information</h3>
+                            <p>Full Name: Lean's Space</p>
+                            <p>Email: Lean@example.com</p>
+                            <p>Phone: +854 123 456 7890</p>
+                            <p>Address: 123 Main St, Hong Kong</p>
+                            <a class="btn" href="edit-customer-details.html">Edit</a>
+                        </div>
+                    </div>
+
+                    <div class="section notifications" id="section-notifications">
+                        <div class="card">
+                            <h3>Notifications</h3>
+                            <p>No new notifications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="column">
+                <h2 class="section-title">Social Network</h2>
+                <p>Follow us on social media to keep up-to-date with the latest company news, research highlights and
+                    benefit from a range of useful resources.</p>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <hr class="divider">
+
+                <div style="display: flex;">
+                    <div class="column">
+                        <h2 class="section-title">QUICK LINKS</h2>
+                        <ul class="quick-links">
+                            <li><a href="../index.html"><i class="fa fa-angle-right"></i> Home</a></li>
+                            <li><a href="../about-us.html"><i class="fa fa-angle-right"></i> About</a></li>
+                            <li><a href="../products.html"><i class="fa fa-angle-right"></i> Products</a></li>
+                            <li><a href="../contact-us.html"><i class="fa fa-angle-right"></i> Contact</a></li>
+                        </ul>
+                        <hr class="divider">
+                    </div>
+                    <div class="column">
+                        <h2 class="section-title">OUR CATEGORIES</h2>
+                        <ul class="categories">
+                            <li><a href="../products.html"><i class="fa fa-angle-right"></i> Stitched</a></li>
+                            <li><a href="../products.html"><i class="fa fa-angle-right"></i> Unstitched</a></li>
+                            <li><a href="../products.html"><i class="fa fa-angle-right"></i> Printed Suit</a></li>
+                            <li><a href="../products.html"><i class="fa fa-angle-right"></i> New Arrivvals</a></li>
+                        </ul>
+                        <hr class="divider">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <iframe class="map-iframe"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215397.86882263774!2d74.40231087831886!3d32.48361099782615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea5674db6cfd%3A0xa8d03983946d4744!2sSialkot%2C+Punjab%2C+Pakistan!5e0!3m2!1sen!2s!4v1565167059141!5m2!1sen!2s"
+                    allowfullscreen></iframe>
+                <hr class="divider">
+                <div class="contact-info">
+                    <span><i class="fa fa-map-marker"></i> City Hong- HK310 Hong Kong</span>
+                    <span><i class="fa fa-phone"></i> +852 45******* </span>
+                    <span><i class="fa fa-fax"></i> +852 61****** </span>
+                    <span><a href="mailto:info@abc.com"><i class="fa fa-envelope"
+                                style="margin-right:10px;"></i>lean@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2023 <span>Lean's Space</span> All rights reserved</p>
+            <p>Designed & Developed by: <a href="#" target="_blank">Lean's Space</a></p>
+        </div>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showTab('order-history');
+        });
+
+        function showTab(section) {
+            const orderHistoryTab = document.getElementById('orderHistoryTab');
+            const savedItemsTab = document.getElementById('savedItemsTab');
+            const accountInfoTab = document.getElementById('accountInfoTab');
+            const notificationsTab = document.getElementById('notificationsTab');
+
+            const orderHistorySection = document.getElementById('section-order-history');
+            const savedItemsSection = document.getElementById('section-saved-items');
+            const accountInfoSection = document.getElementById('section-account-info');
+            const notificationsSection = document.getElementById('section-notifications');
+
+            orderHistorySection.style.display = 'none';
+            savedItemsSection.style.display = 'none';
+            accountInfoSection.style.display = 'none';
+            notificationsSection.style.display = 'none';
+
+            switch (section) {
+                case 'order-history':
+                    orderHistorySection.style.display = 'block';
+                    break;
+                case 'saved-items':
+                    savedItemsSection.style.display = 'block';
+                    break;
+                case 'account-info':
+                    accountInfoSection.style.display = 'block';
+                    break;
+                case 'notifications':
+                    notificationsSection.style.display = 'block';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

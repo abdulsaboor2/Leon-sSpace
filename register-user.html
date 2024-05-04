@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Lean Space's</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-header">
+                Register
+            </div>
+            <div class="login-body">
+                <h2>Customer Registeration</h2>
+
+                <form id="customer-register-form">
+                    <input type="text" id="customer-name" name="customer-name" placeholder="Full Name" required>
+                    <br>
+                    <input type="email" id="customer-email" name="customer-email" placeholder="Email" required>
+                    <br>
+                    <input type="tel" id="customer-phone" name="customer-phone" placeholder="Phone Number" required>
+                    <br>
+                    <input type="text" id="customer-zip-code" name="customer-zip-code" placeholder="Zip Code" required>
+                    <br>
+                    <input type="text" id="customer-address" name="customer-address" placeholder="Address" required>
+                    <br>
+                    <input type="password" id="customer-password" name="customer-password" placeholder="Password"
+                        required>
+                    <br>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                <a href="login-user.html" class="login-option" style="display: flex; justify-content: center;">Already
+                    Have an Account?</a>
+                <a href="index.html" class="login-option">Go to Home</a>
+                <p class="error-message" id="customer-error-message"></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function registerUser(event) {
+            event.preventDefault();
+
+            var name, email, password, errorMessageId;
+
+            name = document.getElementById('customer-name').value;
+            email = document.getElementById('customer-email').value;
+            password = document.getElementById('customer-password').value;
+            errorMessageId = 'customer-error-message';
+
+            if (email !== '' && password !== '' && name !== '') {
+                alert("Account Successfully created");
+                window.location.href = 'login-user.html';
+            } else {
+                document.getElementById(errorMessageId).innerText = 'Name, Email, and Password are required. Please try again.';
+            }
+        }
+
+        document.getElementById('customer-register-form').addEventListener('submit', registerUser);
+    </script>
+
+</body>
+
+</html>

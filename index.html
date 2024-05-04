@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+    <title>Lean's Space - Home</title>
+
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/6bbeae992c.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <p><i class="fas fa-map"></i> Somewhere in the World, Hong Kong</p>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="header-container">
+            <form class="search-form">
+                <input type="text" name="search" placeholder="Search Here" required />
+                <button class="btn btn-extra" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+            <a href="index.html">
+                <img src="images/lean's-space-logo.png" alt="Lean's Space" title="Lean's Space" />
+            </a>
+            <div class="contact-info">
+                <h2>Call US Now!</h2>
+                <a href="tel:8523021234567"><i class="fas fa-mobile-alt"></i> +852-3021234567</a>
+            </div>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Category
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="products.html">Stitched</a>
+                    <a href="products.html">Unstitched</a>
+                    <a href="products.html">Printed Suit</a>
+                    <a href="products.html">New Arrivvals</a>
+                </div>
+            </div>
+            <a href="about-us.html">About</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <div class="login-logout">
+                <a href="checkout.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="register-user.html">Register</a>
+                <a href="login-user.html">Login</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="images/wall-img1.png" alt="Image 1">
+                <img id="slide-2" src="images/wall-img2.png" alt="Image 2">
+                <img id="slide-3" src="images/wall-img3.png" alt="Image 3">
+            </div>
+            <div class="slider-nav">
+                <a href="#" onclick="changeSlide(1)"></a>
+                <a href="#" onclick="changeSlide(2)"></a>
+                <a href="#" onclick="changeSlide(3)"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h1>About Our Product</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of
+            Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of
+            Lorem Ipsum.</p>
+        <br>
+        <a class="btn" href="about-us.html">Read More...</a>
+    </section>
+
+    <section class="catalog">
+        <h2>You Can Download Our Best Quality Products Catalog</h2>
+        <a class="btn" href="files/catelog.pdf" target="_blank">Download Here</a>
+    </section>
+
+    <section>
+        <div id="feature-products">
+            <h2>Featured Products</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product1.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product2.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product3.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product4.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product5.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product6.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product7.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product-details.html">
+                        <div class="product-image">
+                            <img src="images/products/product8.png" alt="Product 1">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Product 1</div>
+                            <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="common-container-center contact-form-container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Lean's Space" required>
+                <input type="email" id="email" name="email" required placeholder="lean@example.com">
+                <textarea id="message" name="message" rows="4" required placeholder="Write your message"></textarea>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="column">
+                <h2 class="section-title">Social Network</h2>
+                <p>Follow us on social media to keep up-to-date with the latest company news, research highlights and
+                    benefit from a range of useful resources.</p>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <hr class="divider">
+
+                <div style="display: flex;">
+                    <div class="column">
+                        <h2 class="section-title">QUICK LINKS</h2>
+                        <ul class="quick-links">
+                            <li><a href="index.html"><i class="fa fa-angle-right"></i> Home</a></li>
+                            <li><a href="about-us.html"><i class="fa fa-angle-right"></i> About</a></li>
+                            <li><a href="products.html"><i class="fa fa-angle-right"></i> Products</a></li>
+                            <li><a href="contact-us.html"><i class="fa fa-angle-right"></i> Contact</a></li>
+                        </ul>
+                        <hr class="divider">
+                    </div>
+                    <div class="column">
+                        <h2 class="section-title">OUR CATEGORIES</h2>
+                        <ul class="categories">
+                            <li><a href="products.html"><i class="fa fa-angle-right"></i> Stitched</a></li>
+                            <li><a href="products.html"><i class="fa fa-angle-right"></i> Unstitched</a></li>
+                            <li><a href="products.html"><i class="fa fa-angle-right"></i> Printed Suit</a></li>
+                            <li><a href="products.html"><i class="fa fa-angle-right"></i> New Arrivvals</a></li>
+                        </ul>
+                        <hr class="divider">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <iframe class="map-iframe"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215397.86882263774!2d74.40231087831886!3d32.48361099782615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea5674db6cfd%3A0xa8d03983946d4744!2sSialkot%2C+Punjab%2C+Pakistan!5e0!3m2!1sen!2s!4v1565167059141!5m2!1sen!2s"
+                    allowfullscreen></iframe>
+                <hr class="divider">
+                <div class="contact-info">
+                    <span><i class="fa fa-map-marker"></i> City Hong- HK310 Hong Kong</span>
+                    <span><i class="fa fa-phone"></i> +852 45******* </span>
+                    <span><i class="fa fa-fax"></i> +852 61****** </span>
+                    <span><a href="mailto:info@abc.com"><i class="fa fa-envelope"
+                                style="margin-right:10px;"></i>lean@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2023 <span>Lean's Space</span> All rights reserved</p>
+            <p>Designed & Developed by: <a href="#" target="_blank">Lean's Space</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
